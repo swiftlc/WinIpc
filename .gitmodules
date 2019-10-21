@@ -1,0 +1,3 @@
+[submodule "HelperForWin32"]
+	path = HelperForWin32
+	url = git@github.com:swiftlc/HelperForWin32.git
