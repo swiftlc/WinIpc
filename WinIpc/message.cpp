@@ -179,7 +179,12 @@ namespace WinIpc {
 
   bool MessageReader::ReadBool(bool* result)
   {
-    return ReadBuiltinType(result);
+    int result_tmp;
+    bool is_success = ReadBuiltinType(&result_tmp);
+    if (is_success) {
+      *result = result_tmp;
+    }
+    return is_success;
   }
 
   bool MessageReader::ReadInt(int* result)

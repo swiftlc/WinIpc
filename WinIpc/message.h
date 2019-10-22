@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <queue>
 
 #include "common.h"
 
@@ -161,4 +162,10 @@ namespace WinIpc {
     size_t capacity_;
   };
 
+  using MessagePtr = std::shared_ptr<Message>;
+
+  using MessageQueue = std::queue<MessagePtr>;
+
+  template<typename ...Args>
+  inline MessagePtr MakeMessage(Args&&...args) { return std::make_shared<Message>(std::forward<Args>(args)...); }
 }
