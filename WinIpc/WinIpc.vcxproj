@@ -11,11 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="common.h" />
-    <ClInclude Include="message.h" />
+    <ClInclude Include="ipc_common.h" />
+    <ClInclude Include="ipc_message.h" />
+    <ClInclude Include="ipc_thread.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="message.cpp" />
+    <ClCompile Include="ipc_message.cpp" />
+    <ClCompile Include="ipc_thread.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

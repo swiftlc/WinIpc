@@ -5,7 +5,7 @@
 #include <cassert>
 #include <algorithm>
 
-#include "message.h"
+#include "ipc_message.h"
 
 namespace {
 
